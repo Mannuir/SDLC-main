@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>SDLC Models</title>
+</head>
+<body>
+    <h2>Accordion</h2>
+
+<button class="accordion">Koskmudel</button>
+<div class="panel">
+    
+    <p> Koskmudel ehk tuntud ka kui klassikaline ehk jadamudel
+        (Waterfall model, classic life cycle)</p>
+        <b>Kirjeldas Winston W. Royce aastal 1970</b>
+        
+      <ul>
+          <li> Jadamisi kulgevat protsessi kirjeldav mudel,
+            tugineb tavalises tootearenduses kasutusel
+            olnud protsessimudelile (inseneriteadus).Ühe etapi töö 
+            tehakse korraga ära ja
+            liigutakse uude etappi.</li>
+
+            <img src="images/KOSK.jpeg" alt="Waterfall" width="350px"/>
+          <li>Koskmudel on sobilik suurtele süsteemidele, mida arendatakse mitmes erinevas kohas korraga. 
+              Sel juhul lubab eelnev korralik planeerimine töid paremini koordineerida</li>
+   
+        
+    <li>Põhiidee kohaselt jagatakse tegevused nii, et iga tegevus toimub jadamisi eraldi etapina. </li> 
+    <li>Royce jagas protsessi järgmisteks põhietappideks:</li>   
+        <b> 1. Nõuete määratlemine.</b>
+        <b>2. Süsteemi ja tarkvara kavandamine.</b>
+        <b> 3. Teostus ja moodulite testimine.</b>
+        <b> 4. Integratsioon ja süsteemi testimine. </b>
+        <b>5. Kasutamine ja hooldus</b>
+           
+      <p> Iga faasi tulemiks on üks või mitu dokumenti, mis kinnitatakse. 
+          Järgmine faas ei tohiks alata enne, kui eelmine on lõpetatud. 
+          Faasidel on teatav ülekate ja info edastamine ühest teise. 
+     </p>
+       
+        
+       
+  
+  
+
+</div>
+
+<button class="accordion">Incremental Model</button>
+<div class="panel">
+  <p>The incremental model is not a separate model. It is essentially a series of waterfall cycles. 
+      The requirements are divided into groups at the start of the project. For each group, the SDLC 
+      model is followed to develop software. The SDLC process is repeated, with each release adding 
+      more functionality until all requirements are met. In this method, every cycle acts as the 
+      maintenance phase for the previous software release. Modification to the incremental model allows 
+      development cycles to overlap.
+    After that subsequent cycle may begin before the previous cycle is complete.</p>
+    <img src="images/052615_1049_WhatisIncre1.png" alt="" width="250px">
+<p>Each iteration passes through the requirements, design, coding and testing phases. And each subsequent
+release of the system adds function to the previous release until all designed functionality has been implemented.</p>
+    <img src="images/052615_1049_WhatisIncre2.png" alt="" width="250px">
+
+    <b>When to use Incremental models?</b>
+    <ul>
+        <li> Requirements of the system are clearly understood</li>
+        <li> When demand for an early release of a product arises</li>
+        <li> When software engineering team are not very well skilled or trained</li>
+        <li> When high-risk features and goals are involved</li>
+        <li></li>
+
+       
+
+
+
+Such methodology is more in use for web application and product based companies
+    </ul>
+
+
+</div>
+
+<button class="accordion">Prototyping</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Spiral</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<img src="images/052615_1232_WhatisSDLCo1.png" alt="Waterfall" width="250px"/>
+</div>
+<button class="accordion">V-shape</button>
+<div class="panel">
+  <p>V Model is a highly disciplined SDLC model in which there is a testing phase parallel to each development phase. The V model is an extension of the waterfall model in which testing is done on each stage parallel with development in a sequential way. It is known as the Validation or Verification Model.</p>
+<img src="images/052715_0904_GuidetoSDLC3.png" alt="Waterfall" width="250px"/>
+</div>
+<button class="accordion">Agile</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<img src="images/052615_1232_WhatisSDLCo1.png" alt="Waterfall" width="250px"/>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
