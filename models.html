@@ -30,12 +30,12 @@
    
         
     <li>Põhiidee kohaselt jagatakse tegevused nii, et iga tegevus toimub jadamisi eraldi etapina. </li> 
-    <li>Royce jagas protsessi järgmisteks põhietappideks:</li>   
-        <b> 1. Nõuete määratlemine.</b>
-        <b>2. Süsteemi ja tarkvara kavandamine.</b>
-        <b> 3. Teostus ja moodulite testimine.</b>
-        <b> 4. Integratsioon ja süsteemi testimine. </b>
-        <b>5. Kasutamine ja hooldus</b>
+   <p><b>Royce jagas protsessi järgmisteks põhietappideks:</b>   </p> 
+        <p> 1. Nõuete määratlemine.</p>
+        <p>2. Süsteemi ja tarkvara kavandamine.</p>
+        <p> 3. Teostus ja moodulite testimine.</p>
+        <p> 4. Integratsioon ja süsteemi testimine. </p>
+        <p> 5.. Kasutamine ja hooldus</p>
            
       <p> Iga faasi tulemiks on üks või mitu dokumenti, mis kinnitatakse. 
           Järgmine faas ei tohiks alata enne, kui eelmine on lõpetatud. 
@@ -49,57 +49,146 @@
 
 </div>
 
-<button class="accordion">Incremental Model</button>
+<button class="accordion">V-mudel</button>
 <div class="panel">
-  <p>The incremental model is not a separate model. It is essentially a series of waterfall cycles. 
-      The requirements are divided into groups at the start of the project. For each group, the SDLC 
-      model is followed to develop software. The SDLC process is repeated, with each release adding 
-      more functionality until all requirements are met. In this method, every cycle acts as the 
-      maintenance phase for the previous software release. Modification to the incremental model allows 
-      development cycles to overlap.
-    After that subsequent cycle may begin before the previous cycle is complete.</p>
-    <img src="images/052615_1049_WhatisIncre1.png" alt="" width="250px">
-<p>Each iteration passes through the requirements, design, coding and testing phases. And each subsequent
-release of the system adds function to the previous release until all designed functionality has been implemented.</p>
-    <img src="images/052615_1049_WhatisIncre2.png" alt="" width="250px">
+  <p>
+   </p>
+    
 
-    <b>When to use Incremental models?</b>
-    <ul>
-        <li> Requirements of the system are clearly understood</li>
-        <li> When demand for an early release of a product arises</li>
-        <li> When software engineering team are not very well skilled or trained</li>
-        <li> When high-risk features and goals are involved</li>
-        <li></li>
+    <p>V-mudel, mis on koskmudeli alaliik, tekkis tõenäoliselt 1960.aastatel, 
+      kuigi otsest viidet algallikale ei ole. V-mudeli põhirõhk on tarkvara 
+      kirjutamisele ja testimisele võrdse kaalu omistamine. Antud mudelit peetakse
+      tüüpilise koskmudeli laienduseks. Seal kasutatakse koskmudelis välja toodud 
+      faaside vahel samu seoseid, kuid n-ö lineaarse langemise asemel liigub V-mudel
+      esmalt diagonaalselt alla ning võtab pärast tarkvara kirjutamise etappi taas suuna 
+      üles (moodustub v-tähe kuju).</p>
 
-       
+      <img src="images/V-MUDEL.png" alt="" width="250px">
 
+    <p>Mudeli kuju iseloomustab erinevate etappide vahelisi seoseid.
+      Mudelis soovitatakse dokumenteerida ka testimine. Iga testi jaoks tuleks 
+      koostada rakendusplaan juba mõnes varasemas etapis ehk mitte oodata arenduse 
+      lõpule jõudmist, et see siis testijatele üle anda.</p>
 
+      <p>Võrreldes agiilse tarkvaraarenduse metoodikaga, saab V-mudeli tööversioon 
+      valmis oluliselt aeglasemalt. Tegemist on üsna jäiga ja vähem paindliku 
+      arendusmudeliga, millele eelistatakse pigem agiilset metoodikat.</p>
 
-Such methodology is more in use for web application and product based companies
-    </ul>
+        
+
+</div>
+
+<button class="accordion">Inkrementaale ja iteratiivne arendusmudel</button>
+<div class="panel">
+  <p>Kuigi paljud peavad iteratiivset ja järkjärgulist arendust kaasaegseks 
+    praktikaks, pärineb selle rakendamine juba 1950. aastate keskpaigast.</p>
+    
+    <p>Iga järgneva kümnendi silmapaistvad tarkvarainseneri mõtteliidrid toetasid 
+    IID tavasid ja paljud suured projektid kasutasid neid edukalt. Need tavad 
+    võisid oma üksikasjade poolest erineda, kuid kõigil oli ühine teema – vältida 
+    ühekäigulist järjestikust, dokumendipõhist ja piiratud sammuga lähenemist.</p>
+
+   <p>Ian Sommerville järgi on iteratiivne arendusmudel pigem üldine nimetus mitmele 
+    nn hübriidmudelile (sh inkrementaal- ja spiraalmudel). Sõna "iteratiivne" rõhutab, 
+    et tegevused selles mudelis korduvad.</p> 
+  
+  
+  <ul>
+   <li><b>Inkrementaalne arendus</b> on etapiviisiline ja ajagraafikut järgiv strateegia, 
+    kus süsteemi osi arendatakse nii erinevatel aegadel kui erineva kiirusega. Konkreetse 
+    osa valmides integreeritakse see süsteemiga. Selle suureks eeliseks on tõik, et arendajad 
+    ja tulevased süsteemi kasutajad saavad varajastest iteratsioonidest õppida ning vajalikku 
+    tagasisidet veel siis, kui võimalik teha muudatusi (näiteks muuta süsteemi arhitektuuri 
+    kogu koodi ümber kirjutamata).
+   <p>Alternatiivne strateegia oleks kodeerida kõik süsteemi osad ja siis kogu kood ühekorraga 
+    integreerida.</p> 
+    </li> 
+
+    <img src="images/inkrementaalne.jpeg" alt="" width="250px">
+
+    <li><b>Iteratiivne arendus</b> on n-ö muutmisstrateegia, kus nähakse ette olemasolevate 
+      süsteemi osade ümbertegemine ja parandamine.
+      <p>Alternatiivne strateegia oleks planeerida tegevused selliselt, et kõik tehtaks õigesti 
+      esimesel katsel.</p>
+       </li> 
+  </ul>
+<ul>
+  <b>Inkrementaalse arenduse eelised:</b>
+
+  <li>Aitab kokku hoida kulusid, mis võivad tekkida kasutaja nõuete muutmise tõttu. 
+    Võrreldes koskmudeliga väheneb ka uuesti tehtava analüüsi ja dokumentatsiooni hulk.</li>
+
+    <li>Kergem ja kiirem tagasiside kliendilt, kes saab anda kommentaare juba valminud osadele.</li>
+
+    <li>Tarkvara võib jõuda kliendini kiiremini ja varem kui nt koskmudeliga.</li>
+  </ul>
+
+  <ul>
+    <b>Inkrementaalse arendused probleemid:</b> 
+
+   <li>Progress ei ole hästi jälgitav - haldurid vajavad progressi mõõtmiseks pidevalt materjale.
+    Kiire arenduse korral ei ole tasuv tekitada dokumente iga pisikese versioonimuudatuse jaoks.</li>
+
+    <li>Süsteemi struktuur kipub uute osade lisandumisel halvenema - pidev muutmine rikub süsteemi
+    struktuuri. Halb struktuur muudab tarkvara hilisema muutmise keerulisemaks ja kulukamaks.</li>
+    
+    
+  </ul>
 
 
 </div>
 
-<button class="accordion">Prototyping</button>
+<button class="accordion">Prototüüpimine</button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
 
-<button class="accordion">Spiral</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<img src="images/052615_1232_WhatisSDLCo1.png" alt="Waterfall" width="250px"/>
+  <p>Prototüüp on süsteemi algne versioon, mida kasutatakse disainivõimaluste katsetamiseks ning ideede demonstreerimiseks. </p>
+<p>John Crinnion kirjeldas oma 1992. aastal avaldatud raamatus „Evolutionary Systems Development“ Systemscrafti prototüübi metoodikana, mida tuleks muuta ja kohandada, et see sobiks konkreetse keskkonnaga, milles seda rakendati. </p>
+<p>Prototüüpe saab kasutada erinevates arenduse faasides. Näiteks nõuete analüüsietapil nende leidmiseks ja valideerimiseks; disainietapil valikuvõimaluste uurimiseks ning kasutajaliidese kavandamiseks. </p>
+<p>Kasu prototüüpimisest: parem süsteemi kasutusmugavus, täpsem ühildumine kasutaja tegelike vajadustega; parem kvaliteet ja hooldatavus ning väiksem vaev arendamisel. </p>
+<img src="images/PROTO.jpeg" alt="" width="250px">
+<p>Joonis 1-4 Prototüübi loomise protsess</p>
+<ul> 
+<b>Prototüüpimise etapid on järgmised: </b>
+<li> Nõuete kogumine. Tehakse üldistatult, samas fikseerides teemasid, mida soovitakse hiljem täpsustada. </li>
+<li> Kiire kavandamine. Keskendutakse nähtavale osale (sisend, väljund, vormid jms), mille  tulemuseks on prototüüp. Klient saab selle alusel oma soove täpsustada. </li>
+<li> Järgneb iteratsioon prototüübi parandamiseks, kuni see vastab kasutaja nõudmistele. </li>
+</ul>
+<p>Prototüübi arendamisel on oluline, et see saaks loodud kiiresti, kasutades selleks abivahendeid (kiire prototüüpimise keeled ja tööriistad). Prototüüp ei pea sisaldama kogu funktsionaalsust - peab keskenduma sellele, millest ei ole hästi aru saadud; prototüübis ei pea olema vigade kontrolli ning see on suunatud funktsionaalsetele nõuetele (mitte näiteks turvalisuse probleemidele). </p>
+<p>Prototüüpimist võib teha erineval põhimõttel - näiteks <b>ühekordne prototüüpimine</b> (Throw away prototyping), <b>evolutsiooniline prototüüpimine</b> (Evolutionary prototyping), <b>lisanduv prototüüpimine</b> (Incremental prototyping). </p>
+<b>Ühekordse prototüüpimise põhimõtted:  </b>
+<p>Sellised prototüübid tuleb peale loomist likvideerida, sest nad pole tegelikule süsteemile heaks baasiks - näiteks ei pruugi nende alusel täita mittefunktsionaalseid nõudeid, prototüübi struktuur ei sobi edasiseks arenduseks ega vasta ka muudele kvaliteedinõuetele. </p>
+
+  
 </div>
-<button class="accordion">V-shape</button>
+<button class="accordion">Spiraalmudel</button>
 <div class="panel">
-  <p>V Model is a highly disciplined SDLC model in which there is a testing phase parallel to each development phase. The V model is an extension of the waterfall model in which testing is done on each stage parallel with development in a sequential way. It is known as the Validation or Verification Model.</p>
-<img src="images/052715_0904_GuidetoSDLC3.png" alt="Waterfall" width="250px"/>
+  <p> Spiraalmudelit kirjeldas esimest korda Barry Boehm oma 1986. a artiklis. </p>
+  <p> Spiraalmudel on üks iteratiivseid arendusmudeleid. Protsessi kulgemist kujutab spiraal. Esimene kordus võib olla näiteks seotud süsteemi teostatavuse uurimisega, teine nõudmiste kirjeldamisega, järgmine kavandamisega jne. Mitu kordust on enamasti seotud tarkvara realiseerimisega, kus selle ehitamine toimub inkrementaalselt. </p>
+  <p> Spiraali korduseid ei tohi võrdsustada tavapäraste arendusprotsessi faasidega. Iga kordus on jaotatud 3 kuni 6 sektorisse (erinevad autorid jagavad erinevalt). Iga kordus algab lähima eesmärgi kavandamise ja riskide hindamisega ning lõppeb n-ö kliendiga - ehk eesmärk peab saama täidetud ja kontrollitud. Sektorite töömahukus ei pruugi olla ühesugune. </p>
+  <ul> <b>Boehm'i järgi on sektoreid neli: </b> </ul>
+  
+  <p> 1. Eesmärkide seadmine (objective setting) - määratakse korduse eesmärgid, piirangud protsessis, tulemused, juhtimisplaan, võimalikud riskid ning lähtudes riskidest ka alternatiivsed strateegiad. </p>
+  <p> 2. Riskide hindamine ja maandamine (risk assessment and reduction) - iga leitud riski jaoks tehakse analüüs ja võetakse nende maandamiseks midagi ette (nt risk, et nõudmised pole adekvaatsed: tehakse prototüüp). </p>
+  <p> 3. Arendus ja valideerimine (Development and validation) - valitakse arendusmudel, mis lähtub hinnatud riskidest (mudel peab olema selline, mis aitab riske vähendada nt kui kasutajaliides on suurim risk, siis võib aidata prototüüpide tegemine). </p><p> 4. Planeerimine (Planning) - projekt vaadatakse üle ja tehakse otsus, kas jätkata järgmisel kordusel. Kui otsustatakse jätkata, siis tehakse plaan järgmise faasi jaoks. </p>
+  </ul>
+  <img src="images/SPIRAALmudel Boehm 1988.png" alt="" width="250px">
+  <p>Joonisel 3 on kujutatud üks näide spiraalmudelist. Tegelik arendusprotsess võib varieeruda nii iteratsioonide arvu kui ka tegevuste paigutuse osas. </p>
+  <p>Selle mudeli kõige olulisem erinevus teistest on riskidega arvestamine. Risk ehk võimalus, et midagi saab untsu minna. Riskide realiseerumise tõttu ületatakse tähtajad ja maksumus, seepärast peab riskidega arvestama ning võtma midagi ette nende maandamiseks. </p>
+  
 </div>
-<button class="accordion">Agile</button>
+<button class="accordion">Agiilse tarkvaraarenduse põhimõtted</button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<img src="images/052615_1232_WhatisSDLCo1.png" alt="Waterfall" width="250px"/>
+  <p>Agiilsete arendusmeetodite jaoks sobib kasutada inkrementaaset mudelit. Agiilse tarkvaraarenduse levimise algus läheb 2001 aastasse, kui senise üliplaanipärase arenduse vastased kirjutasid alla "The Agile Manifesto"-le, mille kõige olulisemates punktides rõhutakse inimesele ja inimeste vahelisele suhtlemisele: </p>
+<ul>
+<li>Inimesed ja suhtlemine on tähtsamad kui protsessid ja tööriistad. </li>
+<li>Töötav tarkvara on tähtsam kui dokumentatsioon. </li>
+<li>Koostöö kliendiga on tähtsam kui läbirääkimised lepingu üle. </li>
+<li>Muudatussoovidele vastutulek on tähtsam kui plaani järgmine. </li>
+</ul>
+<p>Enam arvestatakse tagasiside (koormustestimine, kasutajate arvamus jm) käigus saadud infoga kui loodetakse hoolika etteplaneerimise tehnikale. Põhitähelepanu on inimestel  (sh kasutajatel) ja pideval testimisel. Öeldakse, et agiilmeetoditega saavutatakse sama raha eest parem tulemus, kuigi võime tarkvara funktsioonide valmimise aega on keerulisem ette planeerida. </p>
+<p>Tuntumad ja levinumad agiilsed arendusmeetodid on ekstreemprogrammeerimine (XP), Scrum, Feature Driven Development (FDD), Open Unified Process (OpenUP) jt.</p>
+
+
 </div>
 
 <script>
