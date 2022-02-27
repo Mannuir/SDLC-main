@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmeerimisstiilid</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>Programmeerimisstiilid</h2>
+
+<button class="accordion">Käitumisel põhinev arendus</button>
+<div class="panel">
+  <p>Käitumisel põhinev arendus (Behavior-driven development) on tarkvaraarenduse meetod, mis on välja arenenud testimisel põhinevast arendusest. Käitumisel põhinev arendus kombineerib testimisel põhineva arenduse üldiseid tehnikaid ja põhimõtted. 
+      Selle eesmärk on pakkuda arendustiimile ja juhtivtiimile jagatud tööriista tarkvara arendamisel.</p>
+<p>Käitumisel põhineva arenduse osana kasutatakse tavalise lause konstruktsiooni, mis väljendab käitumist või tulemust. Selleks kasutatakse lihtsat valdkonnaspetsiifilist keelt, mis omakorda genereerib tavalised laused testideks.
+
+<ul> 
+  <p><b>BDD kesksed küsimused on järgnevad:</b></p>
+    <li> Kust alustada testimist?</li>
+    <li>Mida testida ja mida mitte?</li>
+    <li>Kui palju testida ühe korraga?</li>
+    <li>Kuidas aru saada, miks test ebaõnnestub?</li>
+    <li>Paljud inimesed on aastate jooksul BDD raamistikku arendanud, lõpuks kujunes 
+    sellest suhtlemis- ja koostööraamistik tarkvaraprojektis arendajatele, testijatele 
+    ja tehnilise taustata inimestele (nt kliendid, äripartnerid).</li>
+    </ul>
+    <p><b> BDD põhimõtted</b></p>
+   <p> Käitumisel põhinev testimine kasutab käitumise 
+    väljendamiseks poolformaalset vormingut, mis on võetud kasutusloost (user story). 
+    BDD eeldab, et analüütikud ja arendajad teevad koostööd. Nende ülesanne on kirjutada
+     käitumisel põhinevad laused vastavasse dokumenti.</p>
+    
+    <p><b> Struktuur</b></p>
+   <p>Pealkiri: Omadus peaks olema selge ja kõigile arusaadav.</p>
+    
+  <ul> <b>Sündmustik</b>
+<li>Lühike, sissejuhatav osa.</li>
+<li>Kes on loo põhitegelane (klient, kasutaja, administraator jne)?</li>
+<li>Mida ta tahab teha?</li>
+<li>Miks ta seda teha tahab?</li>
+</ul>
+<ul>
+  <b> Stsenaarium</b>
+<li>Kirjeldus stsenaariumist.</li>
+<li>Vajaliku konditsiooni spetsifikatsioon stsenaariumi alguses.</li>
+<li>Stsenaariumi algatav tegevus.</li>
+<li> Oodatav tulemus.</li>
+  </ul>
+    </p>
+
+    </div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
