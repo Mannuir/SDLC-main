@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git ja GitHub</title>
+</head>
+<body>
+    <p>Need terminid võivad tekitada segadust, eriti algajatele. Git on versioonihaldussüsteem, mille saab oma arvutisse alla laadida, GitHub on hostimis- ja koostööpakkuja, mis majutab Giti projekte. See on veebipõhine lahendus, mis võimaldab teil Giti hoidlad sellesse üles laadida.
+        Koodi Giti keskkonnast GitHubi üles laadides muudab selle kättesaadavaks kõigile teistele, kes soovivad projekti panustada. 
+        </p>
+    <p>Git töötab ainult terminalis (MacOS) või käsuviibas (Windows), seega pole sellel graafilist kasutajaliidest (GUI). </p>
+  <p><b>Hoidlad, filiaalid ja kohustused</b></p>      
+
+  <img src="images/hoidlad.JPG" alt="ColorsAndShades" width="350px"/>
+
+  <p>Hoidla on koht, kus kood on salvestatud, seega kaust, mis sisaldab 
+    projekti koodi. Pärast selle kausta muutmist Giti hoidlaks, haldab 
+    Git projekti koodi versiooniajalugu.</p>
+
+    <p>Koodi ei salvestata siiski otse hoidlasse. Meie hoidlas on 
+        "alamkaustad" ehk nn filiaalid. Pärast esimese koodi lisamist 
+        oma hoidlasse luuakse vaikimisi põhiharu. Kuid me ei piirdu ühe 
+        haruga, vaid hoidla sisaldab tavaliselt mitut haru. Nii et 
+        need on hoidlad ja filiaalid, kuid kus on meie kood salvestatud?
+    
+    
+    Meie filiaalides! Filiaal sisaldab meie koodi erinevaid 
+    versioone, meie kohustusi. Iga sissekanne on koodi konkreetse
+    versiooni hetktõmmis.</p>
+
+    <p><b>Peamised käsud</b></p>
+
+    <p> <b>git init</b></p>
+    <p>Kirjutame oma esimese Giti käsu. git initmuudab meie projekti Giti hallatavaks projektiks. Peaksite oma terminalis nägema Initsialiseeritud tühja Git Repository teavet, mis kinnitab, et Git jälgib nüüd projekti. 
+        Aga miks on meie projekt tühi?</p>
+
+     <p><b>git olek</b></p>   
+     <p>git statusannab teavet hetkeseisu kohta. Meil on jälgimata faile, mis tähendab, et Git on teadlik, et failid asuvad meie kaustas, kuid me peame Gitil selgesõnaliselt käskima neid faile jälgida (st kontrollida, kas failid on muutunud) ja 
+         salvestada kõik muudatused uude Commitisse.</p>
+
+         <p><b>git add</b></p>
+         <p>Failide jälgimine kas töötab git add filename("failinimi" peaks olema selle faili nimi, mida soovite jälgida) või git add .jälgib kõigi hoidlas olevate failide muudatusi. git statusNäeme, et lisasime hoidlasse uue faili (meie puhul "index.html"), 
+             kuid siiani ei salvestanud me koodis muudatusi .</p>
+
+        <p><b> git commit</b></p> 
+          <p> Viimase sammuna peame kinnistama või salvestama praeguse koodiversiooni meie hoidlasse. git commit -mlisab meie filiaalile koodi uusima versiooni, -mpeaks andma sisuka sissekandesõnumi. 
+            Meie puhul võiksime kasutada git commit -m "added starting code"</p>     
+
+<p><b>Kasulikud Giti käsud</b></p>
+
+<img src="images/git commands.JPG" alt="ColorsAndShades" width="350px"/>
+<ul>
+    <li>git init: Giti hoidla lähtestamine praeguses kaustas</li>
+    <li>git status: kuvab oma Giti hoidla praegust olekut ("tööpuu" olek)</li>
+<li>git add .: jälgige kõigi hoidlas olevate failide muudatusi</li>
+<li>git commit -m "your message": salvestage värskendatud kood uude sidumisse nimega "teie sõnum"</li>
+<li>git log: loetlege kõik oma harusisesed kohustused</li>
+<li>git checkout branch-name: hüpake haru viimasele sidumisele</li>
+<li>git checkout commitid hüppa konkreetsele haru kohustusele (commitid peaks olema selle kohustuse ID)</li>
+<li>git checkout -- .: hüppa tagasi viimase sissekande juurde ja eemalda kõik jälgimata muudatused</li>
+<li>get reset --hard: muutke valitud Commit uueks HEADiks</li>
+<li>git branch: loetlege kõik oma hoidlas olevad filiaalid</li>
+<li>git checkout -b branch-name: looge uus haru nimega filiaali nimi</li>
+<li>git merge branch-name: ühendage kaks haru, mille ühendate haruga, milles praegu töötate</li>
+<li>git branch -D branch-name: Kustutage haru nimega filiaali nimi</li>
+</ul>
+
+<p><b>GitHubiga alustamine</b></p>
+
+<p>Kuidas saame oma kohalikust Giti hoidlast koodi üles laadida nn kaughoidlasse ja mida vajame alustamiseks? Kohalik hoidla ja 
+    konto veebilehel github.com – see on kõik!</p>
+<p><b>GitHubiga alustamine</b></p>
+
+</body>
+</html>
