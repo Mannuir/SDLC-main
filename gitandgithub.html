@@ -37,11 +37,17 @@
         Aga miks on meie projekt tühi?</p>
 
      <p><b>git olek</b></p>   
-     <p>git statusannab teavet hetkeseisu kohta. Meil on jälgimata faile, mis tähendab, et Git on teadlik, et failid asuvad meie kaustas, kuid me peame Gitil selgesõnaliselt käskima neid faile jälgida (st kontrollida, kas failid on muutunud) ja 
-         salvestada kõik muudatused uude Commitisse.</p>
+     <p>git status annab teavet hetkeseisu kohta. Meil on jälgimata 
+         faile, mis tähendab, et Git on teadlik, et failid asuvad 
+         meie kaustas, kuid me peame Gitil selgesõnaliselt käskima 
+         neid faile jälgida (st kontrollima, kas failid on muutunud) 
+         ja muudatused salvestada.</p>
 
          <p><b>git add</b></p>
-         <p>Failide jälgimine kas töötab git add filename("failinimi" peaks olema selle faili nimi, mida soovite jälgida) või git add .jälgib kõigi hoidlas olevate failide muudatusi. git statusNäeme, et lisasime hoidlasse uue faili (meie puhul "index.html"), 
+         <p>Failide jälgimine kas töötab git add filename
+             ("failinimi" peaks olema selle faili nimi, 
+             mida soovite jälgida) või git add .jälgib kõigi 
+             hoidlas olevate failide muudatusi. git status. - näeme, et lisasime hoidlasse uue faili (meie puhul "index.html"), 
              kuid siiani ei salvestanud me koodis muudatusi .</p>
 
         <p><b> git commit</b></p> 
@@ -69,9 +75,102 @@
 
 <p><b>GitHubiga alustamine</b></p>
 
-<p>Kuidas saame oma kohalikust Giti hoidlast koodi üles laadida nn kaughoidlasse ja mida vajame alustamiseks? Kohalik hoidla ja 
+<p>Kuidas saame oma kohalikust Giti hoidlast koodi üles 
+    laadida nn kaughoidlasse ja mida vajame alustamiseks? 
+    Kohalik hoidla ja 
     konto veebilehel github.com – see on kõik!</p>
-<p><b>GitHubiga alustamine</b></p>
+
+    <p>GitHubil on ka tasuline versioon, kuid kõiki probleemide ja projektihalduse tööriistu pakutakse tasuta, olenemata sellest, 
+        kas kasutate avalikku või privaatset hoidlat.</p>
+    <p>
+        Üks asi, mida tuleb märkida, on see, et avaliku hoidla jaoks ei ole võimalik privaatprojektitahvlit luua, see on vaikimisi lihtsalt avalik ja seda ei saa keelata. Kuni GitHub seda ei muuda, peate kasutama isikliku projekti komplekti 
+        privaatseks või projekti privaatses hoidlas.
+    </p>
+<p><b>Kaughoidla loomine</b></p>
+
+<img src="images/Kaughoidla.jpg" alt="ColorsAndShades" width="350px"/>
+
+<p>Kuid meil on juba kohalik hoidla, miks peaksime siis veel ühe looma? 
+    Idee on luua GitHubis tühi hoidla ja seejärel lükata (st laadida)
+     olemasoleva kohaliku hoidla sisu kaughoidlasse.</p>
+
+<p>Pärast hoidla nime ja (valikulise) kirjelduse andmist peame otsustama, 
+kas tahame luua avaliku või privaatse hoidla.</p>
+
+<img src="images/public.jpg" alt="ColorsAndShades" width="350px"/>
+<p>Nagu nimigi ütleb, näevad avalikku hoidlat GitHubi lehel kõik, 
+    privaatsed hoidlad on saadaval ainult valitud inimestele.</p>
+
+ <p>Klõpsates "Loo hoidla", luuakse tühi kaughoidla. Olemasoleva 
+     kohaliku hoidla sisu saab lisada nii nagu on kirjeldatud lehel, 
+     kuhu meid automaatselt ümber suunatakse:</p>   
+     <img src="images/juhis.jpg" alt="ColorsAndShades" width="350px"/>
+
+<p>Oluline käsk on git remote add origin URL. 
+    See käsk tuleb käivitada tkohalikus projektikaustas 
+    (st kaustas, mis sisaldab Giti hoidlat, mille soovite 
+    GitHubile edastada):</p>
+    <ul>
+        <li>remote add: lisab Giti projekti kaughoidla. 
+    Teisisõnu loob see ühenduse kohaliku ja kaughoidla vahel</li>
+<li> origin: see on kaughoidla nimi.</li> 
+<li> URL on GitHubi kaughoidla URL GitHub lisab aadressi 
+    automaatselt, nagu näeme ekraanipildil</li>
+ <li>Pärast käsu käivitamist kohalikus projektikaustas git remote kuvab meie terminalis kaughoidla ( git remote -vnäitab ka hoidla URL-i). See kinnitab, et lõime edukalt ühenduse oma kohalike ja kaughoidlate vahel, 
+     kuid me ei vahetanud seni andmeid.</li>   
+<li>git push -u origin mastervõimaldab meil lükata (st üles laadida) meie kohaliku hoidla sisu kaugemasse hoidlasse. -u origin masterjuhendab Git looma ülesvoolu konkreetsele harule ja hoidlale, mis tähendab, et me tahame andmed 
+    üles laadida oma "lähte" hoidla "põhi" haru.</li>
+</ul>
+<p> <b>Hoidlale juurdepääsu andmine teistele kasutajatele</b></p>
+
+<p>Valik „Kloonimine või 
+    allalaadimine” meie kaughoidlas pakub URL-i, 
+    mida saab jagada, et anda teistele kasutajatele 
+    juurdepääs hoidlale (see on sama URL, mida kasutasime 
+    varem kohaliku hoidla GitHubi edastamisel).</p>
+
+    <p> <img src="images/klooni.png" alt="ColorsAndShades" width="350px"/></p>
+   <p>Loome uue tühja projekti, mis peaks sisaldama meie koodi GitHubi hoidlast. Meil on URL juba olemas, kusjuures git clone URL("URL" peaks olema URL, mille me just GitHubist haarasime) kopeeritakse kogu kaughoidla kausta ja 
+    muudab selle kausta ka Giti hallatavaks kaustaks.</p> 
+
+    <p>Kloonisime oma hoidla ja saame ka andmeid sellesse 
+        kaughoidlasse edastada. See git pushon kõik,
+         mida siin vajame.</p>
+
+        <p>Miks on git push piisav? Kuna git clone loodi automaatselt 
+        kaugjälgimise haru, mis sisaldab teavet hoidla ja 
+        meie kaughoidla filiaali kohta. Kuna Git teab, kust me 
+        andmed kloonisime, saame ka nüüd andmed 
+        sellele "aadressile" tagasi lükata.</p>
+        
+    <p>Kaugjälgimise filiaali olemasolu saate alati 
+        kontrollida käsuga "git branch -r". 
+        Kui kasutate "git push", 
+        värskendatakse nii kaugjälgimise haru kui ka 
+        kaugharu kohaliku filiaali teabega.</p>
+        
+    <p> <b>Tähtis.</b> Saate juhtida, kellel on juurdepääs 
+        teie GitHubi hoidlale. Kui teie hoidla on avalik, 
+        saavad inimesed seda alati kloonida, kuid te saate 
+        lükkamise lukustada.</p>
+
+        <p><b>GitHubi põhikäskude ülevaade</b></p>
+
+        <ul>
+            <li>git remote add origin URL: loob ühenduse kohaliku Giti hoidla, millega praegu töötate, ja kaughoidla vahel (URL peaks olema selle hoidla URL)</li>
+  <li> git remote -v: kuvab kõik kaughoidlad, millega teie kohalik hoidla on ühendatud ("-v" näitab ka kaughoidla URL-i) </li>
+  <li> git push -u origin master: laadige kood üles oma kohalikust filiaalist kaughoidlas asuvasse kaugharu ("origin" on kaughoidla nimi, "master" on kaugharu nimi) </li>
+  <li> git clone: kogu kaughoidla kopeerimine või kloonimine oma arvutisse. Loob automaatselt kaugjälgimise haru (vt allpool) </li>
+  <li> git push ja git pull: laadige kood üles või laadige kood alla kaughoidlasse. Võimalik ainult pärast kaugjälgimise haru loomist</li>
+  <li> "kaugjälgimise haru": haru kohaliku filiaali ja kaugharu "vahele". Tagab, et kood lükatakse või tõmmatakse õigete hoidlate ja filiaalide vahele. Luuakse automaatselt, kui kasutatakse selgesõnaliselt "git clone" või "git push"/"git pull" (st koos teabega kaughoidla ja filiaali nime kohta) </li>
+  <li> git fetch: Värskendab kaugjälgimise haru kaugharu koodiga</li>
+  <li> git remote rm origin: eemaldab ühenduse kohaliku hoidla ja kaughoidla vahel, "origin" on kaughoidla nimi</li>
+
+
+
+        </ul>
+
+
 
 </body>
 </html>
